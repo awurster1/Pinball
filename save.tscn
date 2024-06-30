@@ -1,0 +1,153 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3okqbrqklc35"]
+
+[ext_resource type="Script" path="res://Control.gd" id="2_ic742"]
+[ext_resource type="Texture2D" uid="uid://fl2b6hiyujeq" path="res://background2.png" id="2_jyaq2"]
+[ext_resource type="FontFile" uid="uid://doafaxhrh6sfc" path="res://joystix monospace.ttf" id="3_4tprl"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background2" type="Sprite2D" parent="."]
+position = Vector2(399, 239.5)
+scale = Vector2(1.92345, 1.72401)
+texture = ExtResource("2_jyaq2")
+
+[node name="Title" type="Label" parent="."]
+unique_name_in_owner = true
+offset_right = 451.0
+offset_bottom = 114.0
+theme_override_fonts/font = ExtResource("3_4tprl")
+theme_override_font_sizes/font_size = 60
+text = "HIGH SCORE:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 798.0
+offset_bottom = 477.0
+script = ExtResource("2_ic742")
+
+[node name="right" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 672.0
+offset_top = 205.0
+offset_right = 792.0
+offset_bottom = 300.0
+theme_override_fonts/font = ExtResource("3_4tprl")
+text = "Right"
+
+[node name="left" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 204.0
+offset_right = 551.0
+offset_bottom = 298.0
+theme_override_fonts/font = ExtResource("3_4tprl")
+text = "Left"
+
+[node name="up" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 551.0
+offset_top = 108.0
+offset_right = 671.0
+offset_bottom = 203.0
+theme_override_fonts/font = ExtResource("3_4tprl")
+text = "Increase"
+
+[node name="down" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 551.0
+offset_top = 301.0
+offset_right = 673.0
+offset_bottom = 399.0
+theme_override_fonts/font = ExtResource("3_4tprl")
+text = "Decrease"
+
+[node name="confirm" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 354.0
+offset_right = 428.0
+offset_bottom = 461.0
+theme_override_fonts/font = ExtResource("3_4tprl")
+theme_override_font_sizes/font_size = 48
+text = "Confirm"
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_top = 192.0
+offset_right = 64.0
+offset_bottom = 253.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_4tprl")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 192.0
+offset_right = 128.0
+offset_bottom = 256.0
+theme_override_fonts/font = ExtResource("3_4tprl")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 192.0
+offset_right = 192.0
+offset_bottom = 256.0
+theme_override_fonts/font = ExtResource("3_4tprl")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 192.0
+offset_right = 256.0
+offset_bottom = 256.0
+theme_override_fonts/font = ExtResource("3_4tprl")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 192.0
+offset_right = 320.0
+offset_bottom = 256.0
+theme_override_fonts/font = ExtResource("3_4tprl")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 192.0
+offset_right = 384.0
+offset_bottom = 256.0
+theme_override_fonts/font = ExtResource("3_4tprl")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Control/right" to="Control" method="_on_right_pressed"]
+[connection signal="pressed" from="Control/left" to="Control" method="_on_left_pressed"]
+[connection signal="pressed" from="Control/up" to="Control" method="_on_up_pressed"]
+[connection signal="pressed" from="Control/down" to="Control" method="_on_down_pressed"]
+[connection signal="pressed" from="Control/confirm" to="Control" method="_on_confirm_pressed"]
