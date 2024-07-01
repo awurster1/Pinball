@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bfjowk84g5glu"]
+[gd_scene load_steps=8 format=3 uid="uid://bfjowk84g5glu"]
 
 [ext_resource type="Texture2D" uid="uid://fl2b6hiyujeq" path="res://background2.png" id="2_inkq6"]
 [ext_resource type="Script" path="res://display_highscores.gd" id="2_nuir2"]
-[ext_resource type="Texture2D" uid="uid://drdtsvsky54gl" path="res://background.png" id="2_qc0bi"]
 [ext_resource type="FontFile" uid="uid://doafaxhrh6sfc" path="res://joystix monospace.ttf" id="4_x7a13"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_q2dmg"]
@@ -26,11 +25,6 @@ font = ExtResource("4_x7a13")
 font_size = 60
 
 [node name="Node2D" type="Node2D"]
-
-[node name="Background" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(400, 241)
-texture = ExtResource("2_qc0bi")
 
 [node name="Background2" type="Sprite2D" parent="."]
 position = Vector2(400, 239)
