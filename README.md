@@ -12,9 +12,9 @@
  7. Install Vulkan and all its dependencies (Just Google this. Pi 4 is a single command after dependencies, Pi 3 and earlier is harder).
  8. When packaging the game, use the "Include PCK" option and make sure you are building it for "arm64"
  9. Transfer the compiled game to the Raspberry Pi; I recommend using SFTP
- 10. In a terminal window, perform "sudo chmod a+x Pinball.*" to make the *.sh and *.arm64 files executable. 
-    -Note: Anytime you update these files (such as a re-upload via SFTP from a recompile), you will need to do this again
- 11. Add Pinball.sh to Openbox's autostart list.
- 12. Reboot.
+ 10. In a terminal window, perform "sudo chmod a+x Pinball.*" to make the *.sh and *.arm64 files executable.
+ 11. *Note:* Anytime you update these files (such as a re-upload via SFTP from a recompile), you will need to do #10 again
+ 12. Add Pinball.sh to Openbox's autostart list.
+ 13. Reboot.
 
  CONGRATS! You're all done!
