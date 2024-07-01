@@ -1,6 +1,7 @@
 extends Node
 const SAVEFILE_PATH = "user://highscores.json"
 
+#Define a default highscore file
 var highscores = [
 	{
 		"Initials": "AJW",

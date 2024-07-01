@@ -4,15 +4,13 @@ extends Control
 var initial_position: Vector2
 
 func _ready():
+	#Capture the mouse to be exclusive to this program and hide it. Comment this out for debugging.
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	# Set the text for each column with 10 high scores
 	var rank_text = ""
 	var initials_text = ""
 	var score_text = ""
-	#var font_color = Color(1,0,0)
-	#var font_color_alt = Color(0.5,0.5,0.5)
-	#$RankLabel.remove_theme_color_override("font_color")
-	#$RankLabel.remove_theme_color_override("font_color_alt")
+	
 	for i in range(10):
 		var rank = str(i + 1) + "th:"
 		if i == 0:
@@ -21,13 +19,13 @@ func _ready():
 			rank = "2nd:"
 		elif i == 2:
 			rank = "3rd:"
-		
+		#change the text for each line; making the following line the next entry in the dictionary.
 		rank_text += rank + "\n"
 		initials_text += str(highscore.highscores[i]["Initials"]) + "\n"
 		score_text += str(highscore.highscores[i]["Score"]) + "\n"
 	
 	
-	
+	#Define what each label's text contents
 	$RankLabel.text = rank_text
 	$InitialsLabel.text = initials_text
 	$ScoreLabel.text = score_text
